@@ -20,12 +20,17 @@ namespace Lavanderia
     {
         Empleados em;
         Validacion val = new Validacion();
+        Random rdn = new Random();
+        int a;
         public Nueva_nota()
         {
             InitializeComponent();
             cbPagado.Items.Add("Si");
             cbPagado.Items.Add("No");
             this.Text = "Generar nueva nota";
+             a = rdn.Next(10000, 100000);
+            txtNumNota.Text = a.ToString();
+            txtNumNota.Enabled = false;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -43,19 +48,36 @@ namespace Lavanderia
         private void btnGuardarNota_Click(object sender, EventArgs e)
         {
             CerrarBd acc = new CerrarBd();
-            int resultado= acc.InsertarNuevaNota(txtNumNota, txtNombCliente, txtEmpleada, txtCantidad, cbPagado);
-            if(resultado>0)
+            if (txtCantidad.Text.Trim() == "" || txtEmpleada.Text.Trim() == "" || txtNombCliente.Text.Trim() == "" || txtNumNota.Text.Trim() == "" || cbPagado.Text.Trim() == "")
             {
-                Console.WriteLine("se inserto correctamente");
-                DialogResult result = MessageBox.Show("DESEA GENERAR LA NOTA PARA IMPRIMIR?", "GENERAR NOTA", MessageBoxButtons.YesNoCancel);
-                DefinirImpresion(result);    
-                this.Hide();
-                em = new Empleados();
-                em.Show();
+                MessageBox.Show("RECUERDA LLENAR TODOS LOS CAMPOS");
             }
             else
             {
-                MessageBox.Show("NO SE INGRESO CORRECTAMENTE");
+                
+                int resultado = acc.InsertarNuevaNota(a.ToString(), txtNombCliente, txtEmpleada, txtCantidad, cbPagado);
+                if (resultado > 0)
+                {
+                    Console.WriteLine("se inserto correctamente");
+                    DialogResult result = MessageBox.Show("DESEA GENERAR LA NOTA PARA IMPRIMIR?", "GENERAR NOTA", MessageBoxButtons.YesNoCancel);
+                    if (result == DialogResult.Yes)
+                    {
+                        DefinirImpresion(result);
+                        this.Hide();
+                        em = new Empleados();
+                        em.Show();
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                        this.Hide();
+                        em = new Empleados();
+                        em.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("NO SE INGRESO CORRECTAMENTE");
+                }
             }
         }
 

@@ -19,9 +19,7 @@ namespace Lavanderia
             InitializeComponent();
             timer1.Enabled = true;
             btnEliminarRegistro.Hide();
-            btnModifRegistro.Hide();
             btnElimNota.Hide();
-            btnModifNota.Hide();
             this.Text = "Administración";
            
         }
@@ -44,7 +42,7 @@ namespace Lavanderia
             DatosBd.MostrarRegistrosComboBox(dataGridView1,fecha);
             dataGridView1.Show();
             btnEliminarRegistro.Show();
-            btnModifRegistro.Show();
+            btnElimNota.Hide();
         }
 
         private void bntVerNotas_Click(object sender, EventArgs e)
@@ -56,9 +54,7 @@ namespace Lavanderia
             DatosBd.MostrarNotas(dataGridView1,fecha);
             dataGridView1.Show();
             btnEliminarRegistro.Hide();
-            btnModifRegistro.Hide();
             btnElimNota.Show();
-            btnModifNota.Show();
             
 
         }

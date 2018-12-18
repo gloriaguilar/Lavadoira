@@ -92,9 +92,9 @@ namespace Lavanderia
             con.CerrarConexion();
         }
 
-        public int InsertarNuevaNota(TextBox numnota, TextBox nomcliente, TextBox empleada, TextBox cantidad, ComboBox pagado)
+        public int InsertarNuevaNota(String numnota, TextBox nomcliente, TextBox empleada, TextBox cantidad, ComboBox pagado)
         {
-            numNota = int.Parse(numnota.Text);
+            numNota = int.Parse(numnota);
             nomCliente = nomcliente.Text;
             nomEmpleada = empleada.Text;
             Cantidad = int.Parse(cantidad.Text);

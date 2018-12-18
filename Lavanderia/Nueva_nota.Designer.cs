@@ -31,6 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbPagado = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -43,9 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNumNota = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +91,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(609, 372);
             this.panel2.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(24, 91);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(243, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "*Recuerda que el número es automático.";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(336, 177);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(263, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "*Recuerda que solo debes ingresar números";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(136, 283);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(377, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "*Recuerda seleccionar la pestaña para ver las opciones";
             // 
             // cbPagado
             // 
@@ -212,36 +242,6 @@
             this.label2.Size = new System.Drawing.Size(135, 33);
             this.label2.TabIndex = 0;
             this.label2.Text = "Num. Nota";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(136, 283);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(377, 16);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "*Recuerda seleccionar la pestaña para ver las opciones";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(336, 177);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(263, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "*Recuerda que solo debes ingresar números";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 91);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(326, 13);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "*Recuerda seleccionar la pestaña para ver las opciones";
             // 
             // Nueva_nota
             // 
